@@ -1,0 +1,27 @@
+{
+    "name" : "pathfinder",
+    "description" : "Pathfinder request router",
+    "license" : "MIT",
+    "keywords" : ["pathfinder", "request", "router"],
+    "authors" : [
+        {
+            "name" : "David Ludwig",
+            "email" : "davidludwigii@gmail.com"
+        }
+    ],
+    "require" : {},
+    "require-dev" : {},
+    "autoload": {
+        "files" : [
+
+        ],
+        "psr-4" : {
+            "Pathfinder\\" : "src/Pathfinder/"
+        }
+    },
+    "extra" : {
+        "branch-alias" : {
+            "dev-master" : "1.0-dev"
+        }
+    }
+}

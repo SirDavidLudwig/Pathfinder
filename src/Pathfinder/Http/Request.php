@@ -140,7 +140,7 @@ class Request
 
     public function setMethod(string $method)
     {
-        $this->method = $method;
+        $this->method = strtolower($method);
 
         return $this;
     }

@@ -1,7 +1,10 @@
 <?php
 
 
-// Add a get route to the router
-$router->get("/profile/{username}/edit", function() {
-    return 'You\'re editing the page';
-});
+$router->get("/Pathfinder/profile/{username}/edit/{option}",
+	[
+		'controller' => '\Pathfinder\Testing\HomeController',
+		'name' => 'home'
+	],
+	['auth', 'web']
+);

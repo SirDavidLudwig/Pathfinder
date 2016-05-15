@@ -7,8 +7,9 @@ require __DIR__ .'/vendor/autoload.php';
 
 // Create the kernel, which will create and manage the routes
 $kernel = new Pathfinder\Core\HttpKernel([
-    'routes' => __DIR__ . '/routes.php']
-);
+	'middleware' => __DIR__ . '/middleware.php',
+    'routes' => __DIR__ . '/routes.php'
+]);
 
 
 // Capture the current request
@@ -24,6 +25,7 @@ $response->send();
 
 
 ?>
+
 
 <form action="" method="post">
     <button type="submit">Submit</button>

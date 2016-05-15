@@ -1,5 +1,14 @@
 <?php
 
+class Something
+{
+	public function test()
+	{
+		echo "Hello from the current something instance thing!";
+	}
+}
+
+$something = new Something();
 
 // Import the auto-loader
 require __DIR__ .'/vendor/autoload.php';
@@ -8,7 +17,8 @@ require __DIR__ .'/vendor/autoload.php';
 // Create the kernel, which will create and manage the routes
 $kernel = new Pathfinder\Core\HttpKernel([
 	'middleware' => __DIR__ . '/middleware.php',
-    'routes' => __DIR__ . '/routes.php'
+    'routes'     => __DIR__ . '/routes.php',
+    'typehints'  => [$something],
 ]);
 
 

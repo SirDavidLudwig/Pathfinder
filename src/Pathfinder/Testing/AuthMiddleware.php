@@ -8,8 +8,9 @@ use Pathfinder\Http\Request;
 
 class AuthMiddleware extends Middleware
 {
+
 	public function handle(Request $request, Closure $next)
 	{
-		return $next($request);
+		return "Authorized" . $next($request);
 	}
 }

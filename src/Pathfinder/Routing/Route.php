@@ -85,7 +85,7 @@ class Route
 
     public function setUri(string $uri)
     {
-        $this->mUri = $uri;
+        $this->mUri = rtrim($uri, '/');
         $this->mUriParts = [];
         $this->mUriSlugs = [];
 
@@ -106,6 +106,7 @@ class Route
 
     public function checkUri($uri)
     {
+        $uri = rtrim($uri, '/');
         $result = preg_match($this->mPattern, $uri, $matches);
 
         if ($result)

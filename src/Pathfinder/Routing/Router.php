@@ -124,10 +124,12 @@ class Router
     public function route(string $method, string $uri)
     {
         foreach ($this->routes[$method] as $route)
-        
-            if ($result = $route->checkUri($uri))
+
+            if (($result = $route->checkUri($uri)) !== False)
             
                 return [$route, $result];
+
+        
             
         return False;
     }
